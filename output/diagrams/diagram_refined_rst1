@@ -1,0 +1,65 @@
+digraph {
+    compound=true
+    graph [
+        fontname=Lato
+        rankdir=TB
+        splines=ortho
+        nodesep=0.45
+        ranksep=0.6
+        fontsize=20
+        label="Snakes and Ladders as a Markov Chain\n(Disclaimer: diagram generated with an AI model)"
+        labelloc=b
+        peripheries=0
+    ]
+    node [
+        fontname=Lato
+        style="filled,rounded"
+        margin=0.2
+        penwidth=0
+        colorscheme=blues9
+        shape=box
+        width=2.4
+    ]
+    edge [fontname=Lato color="#2B303A"]
+
+    A [label="Snakes and Ladders is an example\nof a Markov Chain." fillcolor=4]
+    B [label="Board has 101 numbered squares:\nstates 0 through 100." fillcolor=3]
+    C [label="Start state: 0" fillcolor=2 width=2.0]
+    D [label="Throw a die" fillcolor=2 width=2.0]
+    E [label="Move ahead by the number rolled\nwith probability 1/6 for each outcome." fillcolor=3 width=3.2]
+    F [label="New state reached" fillcolor=3 width=2.2]
+    G [label="Is the new state special?" shape=diamond style=filled fillcolor="#40e0d0" width=3.0 height=1.1]
+    H [label="Ordinary state:\nstay in that state." fillcolor=2 width=2.3]
+    I [label="Snake head:\nmove backward." fillcolor=2 width=2.3]
+    J [label="Ladder base:\nclimb to the top." fillcolor=2 width=2.3]
+    K [label="Have you reached\nstate 100?" shape=diamond style=filled fillcolor="#40e0d0" width=2.8 height=1.1]
+    L [label="Terminal state: 100\nGame ends." fillcolor=4 width=2.4]
+    M [label="Continue playing\nfrom the new state." fillcolor=2 width=2.5]
+
+    subgraph cluster_special {
+        style="rounded"
+        color=lightgrey
+        label="Special states"
+        fontsize=15
+        I
+        J
+    }
+
+    { rank=same; H; I; J }
+
+    A -> B [dir=none]
+    B -> C [dir=none]
+    C -> D
+    D -> E
+    E -> F
+    F -> G
+    G -> H [xlabel="Ordinary"]
+    G -> I [xlabel="Snake"]
+    G -> J [xlabel="Ladder"]
+    H -> K
+    I -> K
+    J -> K
+    K -> L [xlabel="Yes"]
+    K -> M [xlabel="No"]
+    M -> D
+}

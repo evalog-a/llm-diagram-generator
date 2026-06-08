@@ -1,0 +1,1 @@
+I fixed flowchart convention issues by using rounded boxes for processes and diamonds only for decisions. I also reduced asymmetry and crossings by placing the three outcomes of the first decision on one rank, removing the misleading invisible I→J link, and slightly widening long-text nodes to avoid crowding. The AI-generated disclaimer was already present and is kept.

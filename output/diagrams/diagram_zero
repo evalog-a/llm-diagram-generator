@@ -1,0 +1,53 @@
+digraph SnakesAndLaddersMarkovChain {
+  graph [
+    label="Snakes and Ladders as a Markov Chain\nDisclaimer: This diagram was generated with an AI model.",
+    labelloc=t,
+    fontsize=18,
+    fontname="Helvetica",
+    rankdir=TB,
+    nodesep=0.5,
+    ranksep=0.8,
+    splines=ortho,
+    pad=0.3
+  ];
+
+  node [
+    shape=box,
+    style="rounded,filled",
+    fillcolor="#EAF2F8",
+    color="#5D6D7E",
+    fontname="Helvetica",
+    fontsize=11,
+    width=2.3,
+    height=0.7
+  ];
+
+  edge [
+    color="#5D6D7E",
+    fontname="Helvetica",
+    fontsize=10,
+    arrowsize=0.8
+  ];
+
+  start [label="Start state\n0"];
+  roll [label="Throw die\n(1–6)"];
+  move [label="Move ahead by\ndie result\nP = 1/6 each"];
+  check [label="Arrive at new square\n(state 1–100)"];
+  ordinary [label="Ordinary state\nStay on new state"];
+  snake [label="Snake head\nMove backward"];
+  ladder [label="Ladder base\nClimb upward"];
+  terminal [label="Terminal state\n100"];
+
+  start -> roll;
+  roll -> move;
+  move -> check;
+
+  check -> terminal [label="if state = 100"];
+  check -> ordinary [label="ordinary square"];
+  check -> snake [label="snake"];
+  check -> ladder [label="ladder"];
+
+  ordinary -> roll [label="continue"];
+  snake -> roll [label="continue from lower state"];
+  ladder -> roll [label="continue from higher state"];
+}

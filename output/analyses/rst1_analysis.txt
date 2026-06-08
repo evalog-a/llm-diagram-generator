@@ -1,0 +1,36 @@
+Disclaimer: This text is generated with the gpt-5.4 language model.
+ The model uses the following paper to generate its output: Stede, Manfred, Maite Taboada, and Debopam Das. 'Annotation guidelines for rhetorical structure.' Manuscript. University of Potsdam and Simon Fraser University (2017).
+EDUs:
+1. Everybody is familiar with the centuries old board game Snakes and Ladders,
+2. which is an example of a Markov Chain.
+3. In a nutshell, there is a board with a hundred and one numbered squares on it,
+4. some of which are ‘snakes’ and ‘leaders’,
+5. which can be considered states.
+6. The game proceeds as follows.
+7. Players advance from the start state of 0 by throwing dice and using the numbers they obtain to move ahead to a new state until they reach the terminal state of 100.
+8. When moving to a new state, they can advance to an ordinary state or one of the two special states: ‘snakes’ or ‘ladders’.
+9. If a player’s new state is the head of a snake, they have to go backwards, losing some of their advance.
+10. If it is the base of a ladder, they advance to the top of that ladder.
+
+RST tree:
+- Joint
+  - Background
+    - Nucleus: 1
+    - Satellite: 2
+  - Joint
+    - Elaboration
+      - Nucleus: 3
+      - Satellite: 4
+    - E-Elaboration
+      - Nucleus: 3-4
+      - Satellite: 5
+  - Joint
+    - Preparation
+      - Satellite: 6
+      - Nucleus: 7-10
+    - Sequence
+      - Nucleus: 7
+      - Nucleus: 8
+      - Contrast
+        - Nucleus: 9
+        - Nucleus: 10

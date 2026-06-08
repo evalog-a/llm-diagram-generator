@@ -1,0 +1,1 @@
+The diagram is mostly valid and already includes the AI disclaimer. I improved flowchart consistency by using rounded boxes only for process steps, keeping the diamond for the decision, reducing branch label placement issues by using edge labels, and balancing the three outcome nodes with a same-rank layout for better symmetry and fewer awkward bends.

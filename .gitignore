@@ -1,0 +1,56 @@
+### PyCharm/JetBrains Specific
+.idea/
+*.iml
+cmake-build-*/
+out/
+
+### Python Specific
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+### Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+### Distribution / Packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+### Environment Variables & Secrets
+.env
+.venv
+env/
+venv/
+*.log
+
+### Testing / Coverage
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*,cover
+.hypothesis/
+.pytest_cache/
+.Rhistory

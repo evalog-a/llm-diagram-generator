@@ -1,0 +1,36 @@
+digraph {
+    graph [fontname=Lato, rankdir=TB, splines=ortho, nodesep=0.45, ranksep=0.6,
+           label="Snakes and Ladders as a Markov Chain\nDisclaimer: This diagram is generated with an AI model.",
+           labelloc=t, fontsize=20, pad=0.2, peripheries=0]
+
+    node [fontname=Lato, style="filled,rounded", shape=box, fillcolor="#DCEAF7", color="#DCEAF7", margin=0.2]
+    edge [fontname=Lato, color="#2B303A", arrowsize=0.8]
+
+    intro [label="Snakes and Ladders is a\ncenturies-old board game\nand an example of a\nMarkov chain.", width=2.6]
+    board [label="The board has 101\nnumbered squares\n(0 to 100), treated\nas states.", width=2.6]
+    start [label="Start at state 0.", width=2.6]
+    roll [label="Throw a die and move\nahead by the number rolled,\nwith probability 1/6 for\neach outcome.", width=2.6]
+    move [label="Reach a new state.", width=2.6]
+    terminal [label="Continue until reaching\nterminal state 100.", width=2.6]
+
+    decision [label="What kind of\nnew state is it?", shape=diamond, width=2.2, height=1.1, fillcolor="#DCEAF7", color="#DCEAF7"]
+    ordinary [label="Ordinary state:\nstay on that state.", width=2.6]
+    snake [label="Snake head:\nmove backward and lose\nsome advance.", width=2.6]
+    ladder [label="Ladder base:\nclimb to the top\nof the ladder.", width=2.6]
+
+    intro -> board
+    board -> start
+    start -> roll
+    roll -> move
+    move -> decision
+
+    { rank=same; ordinary; snake; ladder }
+
+    decision -> ordinary [label="Ordinary"]
+    decision -> snake [label="Snake"]
+    decision -> ladder [label="Ladder"]
+
+    ordinary -> terminal
+    snake -> terminal
+    ladder -> terminal
+}

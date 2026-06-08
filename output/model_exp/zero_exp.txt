@@ -1,0 +1,1 @@
+The diagram already includes the AI disclaimer, but it has asymmetric branching, long return edges, and uses a process box for a conditional step. I changed the decision to a diamond, balanced the branch layout, shortened labels, and reduced crossing risk with straight top-down flow and side returns.
